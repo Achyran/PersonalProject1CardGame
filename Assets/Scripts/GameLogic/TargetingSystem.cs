@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TargetingSystem : MonoBehaviour
 {
+
+   
     //Get layer that needs to be targeted
     public static string targetTag;
     public static CardDataCreature selectedCard;
@@ -41,5 +43,5 @@ public class TargetingSystem : MonoBehaviour
         selectedCard = null;
         Debug.Log("Target Resolved");
     }
-
+    
 }

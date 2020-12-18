@@ -9,7 +9,7 @@ using UnityEngine;
 public class GameMaster : MonoBehaviour
 {
 
-    
+
     //--------------------------Singelton Reference-----------------//
     public static GameMaster current;
     private void Awake()
@@ -38,12 +38,11 @@ public class GameMaster : MonoBehaviour
     public int StartHand;
     public int maxHandSize;
     public int curentTurne = 1;
-    public List<GameObject> Cardlist;
+    public List<GameObject> Cardlist;   // holds the card prefabs
     //---------------------------------------------------------------//
     public int PlayerOneHP;
     public int PlayerTwoHP;
-    public int PlayerOneMana;
-    public int PlayerTwoMana;
+    public int[] PlayerMana = { 10, 10 };
     private bool eventTriggerd = false;
 
     private void Start()
@@ -104,7 +103,7 @@ public class GameMaster : MonoBehaviour
     }
     
 
-    void Nextphase()
+    public void Nextphase()
     {
         eventTriggerd = false;
         curentPhase++;
@@ -116,6 +115,7 @@ public class GameMaster : MonoBehaviour
     public event Action<player,int> event_main2;
     public event Action<player,int> event_end;
     public event Action<int> event_StartGame;
+    public event Action<GameObject> event_CardIsPlayed;
 
     public void StartGame(int pStartHand)
     {
@@ -166,11 +166,24 @@ public class GameMaster : MonoBehaviour
         }
     }
 
+    public void PlayCard(player pPlayer, GameObject pCard, int pmana)
+    {
 
+        if (event_CardIsPlayed != null && pPlayer == curentPlayer )           //add mana cost
+        {
+            if (PlayerMana[(int)curentPlayer] >= pmana)
+            {
+                PlayerMana[(int)curentPlayer] = PlayerMana[(int)curentPlayer] - pmana;
+                event_CardIsPlayed(pCard);
+            }
+            else Debug.Log("Low Mana");
+        }  
+    
+    }
     //-------------------------------------------------------//
 
 
-    
+
     void Debuginfos()
     {
         if (Input.GetKeyDown(KeyCode.I))

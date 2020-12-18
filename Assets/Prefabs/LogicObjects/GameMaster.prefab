@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2406348896326034352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2406348896326034354}
+  - component: {fileID: 2406348896326034353}
+  m_Layer: 0
+  m_Name: GameMaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2406348896326034354
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2406348896326034352}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2406348896326034353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2406348896326034352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f775d2041911ba34fbd7e8a89d4ae4c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartHP: 20
+  StartHand: 20
+  maxHandSize: 5
+  curentTurne: 1
+  Cardlist:
+  - {fileID: 7847230831348160312, guid: e46f2b6a7375aa14d99ce51e4b7b58f3, type: 3}
+  - {fileID: 5318399268300272620, guid: 714018fc0fa56dc4b8472f27750f9f6f, type: 3}
+  - {fileID: 2880219090710449657, guid: 706e6694e5358b14ab2ed75b65c0d25d, type: 3}
+  - {fileID: 4014102358571799265, guid: 8f39654c96f84454198e26658596c501, type: 3}
+  - {fileID: 4303499970796136365, guid: 97026cd8179f0a641a6daff1b20647cc, type: 3}
+  - {fileID: 6042729613771352994, guid: 49c5638e7bf7fa14fa864561f5afd981, type: 3}
+  - {fileID: 50264935978042362, guid: 8180602facba476479bf95fe234ec9ef, type: 3}
+  - {fileID: 1679207782625159618, guid: 68b09b691f3793b458aa225cefb91bd4, type: 3}
+  - {fileID: 6272474299225310930, guid: 3166696b184d99541bad9ed4913682c3, type: 3}
+  - {fileID: 4491354977367595217, guid: 615a9005e85fc8a4e864db26bf11764b, type: 3}
+  - {fileID: 4542345161249578136, guid: 9c16a2386a5a5d244a5d63bc8c4b88e2, type: 3}
+  - {fileID: 1362374131987831643, guid: 42edf3e178f1f8f4a91a7b0ea8e50bc9, type: 3}
+  - {fileID: 3305325739054720743, guid: 9bd7e4ceaaa45eb4482faebe91293552, type: 3}
+  - {fileID: 8437122166401335303, guid: 8380f144e11a36d4080575d9e469995f, type: 3}
+  - {fileID: 8879895387627335754, guid: 3cfbd22ecafc7a64a8b48d0aaa9dd9ea, type: 3}
+  - {fileID: 6956000185839267599, guid: 43943f3b59047334c92bdf25a528b5ad, type: 3}
+  - {fileID: 3459440352511516835, guid: 47e13290b7b45cf4c83c6ccf4274d4ff, type: 3}
+  - {fileID: 6100974265080773501, guid: eff67807e490cc24ab7c02da140c8904, type: 3}
+  - {fileID: 7792112458608464216, guid: 267ac9b85d0e3924e8177f67231c0ee8, type: 3}
+  - {fileID: 4341593194417987636, guid: 51150fdc7620b0f438cc68ef5059d1ef, type: 3}
+  PlayerOneHP: 0
+  PlayerTwoHP: 0
+  PlayerOneMana: 0
+  PlayerTwoMana: 0

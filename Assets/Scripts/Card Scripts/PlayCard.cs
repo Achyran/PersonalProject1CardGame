@@ -6,8 +6,14 @@ public class PlayCard : MonoBehaviour
 {
     public SelectCard selectCard;
     public CardDataCreature cardData;
+
     private void OnMouseDown()
     {
+        if(GetComponentInParent<Hand>() != null)
+        {
+            GameMaster.current.PlayCard(GetComponentInParent<Hand>().player, this.gameObject, cardData.manaCost);
+        }
+        /*
         int tempMana = 8;
 
         if (tempMana >= cardData.manaCost && cardData.location == CardDataCreature.cardState.HAND && !TargetingSystem.findTarget)
@@ -24,12 +30,14 @@ public class PlayCard : MonoBehaviour
         {
             Debug.Log("You can't play a card yet, card interaction is on stack");
         }
+        */
     }
-
 
     public void ReplacementDie() 
     {
+    /*
         TargetingSystem.setTagTarget("Die");
         TargetingSystem.selectedCard = cardData;
+    */
     }
 }

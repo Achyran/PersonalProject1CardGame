@@ -6,7 +6,28 @@ public class Hand : MonoBehaviour
 {
     public GameMaster.player player;
     public List<GameObject> cards;
+    public Field field;
     private int oldCardCount;
+    private void Start()
+    {
+        GameMaster.current.event_CardIsPlayed += PlayCard;
+    }
+
+    private void PlayCard(GameObject pPcard)
+    {
+        if (cards.Contains(pPcard))
+        {
+            field.cards.Add(pPcard);
+            cards.Remove(pPcard);
+            pPcard.transform.SetParent(field.transform);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        GameMaster.current.event_CardIsPlayed -= PlayCard;
+    }
+
     public int handAmound()
     {
         return cards.Count;
